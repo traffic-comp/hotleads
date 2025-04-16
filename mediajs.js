@@ -36,7 +36,7 @@ const handleClick = async function (e) {
 
   switch (this.dataset.platform) {
     case 'skype':
-      openSkype('live:.cid.c9f4f23c9e68115f');
+      openSkype('live:.cid.60e1be406cdf48a6');
       break;
     case 'telegram':
       const data = `${leadIp.ip}&${getUtmParams().ad}&${getUtmParams().pixel}&${
@@ -44,7 +44,7 @@ const handleClick = async function (e) {
       }`;
 
       const base = stringToBase64(data);
-      console.log(`tg://resolve?domain=trafficg_hot_leads_bot&start=${base}`);
+      console.log(`tg://resolve?domain=hot_hot_leads_bot&start=${base}`);
       window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=${base}`;
       break;
     case 'whatsapp':
@@ -53,6 +53,8 @@ const handleClick = async function (e) {
     default:
       return;
   }
+
+
   fbq('track', 'Lead');
   await fetch(`https://us-central1-test2-411610.cloudfunctions.net/trackform`, {
     method: "post",
@@ -64,7 +66,7 @@ const handleClick = async function (e) {
       userId: "7325647133",
       created_at: Date.now(),
       utmLink: getUtmParams().ad,
-      leadIp: leadIp,
+      leadIp: leadIp.ip,
     }),
   });
 };
@@ -101,7 +103,7 @@ form.addEventListener('submit', async (e) => {
       userId: '7325647133',
       created_at: Date.now(),
       utmLink: getUtmParams().ad,
-      leadIp: leadIp,
+      leadIp: leadIp.ip,
     }),
   });
 });
