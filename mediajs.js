@@ -36,7 +36,7 @@ const handleClick = async function (e) {
 
   switch (this.dataset.platform) {
     case 'skype':
-      openSkype('live:.cid.60e1be406cdf48a6');
+      openSkype('live:.cid.c9f4f23c9e68115f');
       break;
     case 'telegram':
       const data = `${leadIp.ip}&${getUtmParams().ad}&${getUtmParams().pixel}&${
