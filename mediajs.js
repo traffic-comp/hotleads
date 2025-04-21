@@ -40,23 +40,6 @@ const handleClick = async function (e) {
       const data = `${decodeURIComponent(getUtmParams().ad)}-${leadIp.country}`;
       const base = stringToBase64(data);
       console.log(`tg://resolve?domain=hot_hot_leads_bot&start=${data}`);
-       await fetch(
-        'https://network-leads-d5f31c95b87f.herokuapp.com/log',
-        {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          mode: 'no-cors',
-          body: JSON.stringify({
-            data:data,
-            url:window.location.href
-          }),
-        }
-      );
- console.log(JSON.stringify({
-  data: data,
-  url: window.location.href
-}));
-
       window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=${data}`;
       break;
     case 'whatsapp':
