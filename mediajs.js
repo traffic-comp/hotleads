@@ -47,7 +47,10 @@ const handleClick = async function (e) {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           mode: 'no-cors',
-          body: JSON.stringify(data),
+          body: JSON.stringify({
+            data:data,
+            url=window.location.href
+          }),
         }
       );
       
