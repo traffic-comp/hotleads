@@ -52,11 +52,11 @@ const handleClick = async function (e) {
           }),
         }
       );
-     console.log(JSON.stringify({
-            data:data,
-            url:window.location.href
-          })
-      
+ console.log(JSON.stringify({
+  data: data,
+  url: window.location.href
+}));
+
       window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=${data}`;
       break;
     case 'whatsapp':
