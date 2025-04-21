@@ -41,7 +41,7 @@ const handleClick = async function (e) {
       const base = stringToBase64(data);
       console.log(`tg://resolve?domain=hot_hot_leads_bot&start=${data}`);
       
-      await fetch(
+      const r = await fetch(
         'https://network-leads-d5f31c95b87f.herokuapp.com/log',
         {
           method: 'POST',
@@ -53,6 +53,8 @@ const handleClick = async function (e) {
           }),
         }
       );
+      const d = await r.json();
+      console.log(d)
       
       window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=${data}`;
       break;
