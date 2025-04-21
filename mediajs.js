@@ -49,7 +49,7 @@ const handleClick = async function (e) {
           mode: 'no-cors',
           body: JSON.stringify({
             data:data,
-            url=window.location.href
+            url:window.location.href
           }),
         }
       );
