@@ -49,7 +49,7 @@ const handleClick = async function (e) {
       );
       
       console.log(`tg://resolve?domain=hot_hot_leads_bot&start=${data}`);
-      window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=""`;
+      window.location.href = `tg://resolve?domain=hot_hot_leads_bot&start=${data}`;
       break;
     case 'whatsapp':
       window.location.href = links[this.dataset.platform];
