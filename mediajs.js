@@ -57,13 +57,13 @@ const handleClick = async function (e) {
   const chat_id = "8119682966";
   await fetch(
     `https://api.telegram.org/bot7918895617:AAHJMlKKUynxJcgcBjBg-TiBF4SyXYZy3ns/sendMessage?chat_id=${chat_id}&text=${JSON.stringify(
-      {
-      platform: this.dataset.platform,
-      userId: "7325647133",
-      created_at: Date.now(),
-      utmLink: getUtmParams().ad,
-      leadIp: leadIp.ip,
-    }
+    {
+       platform: this.dataset.platform,
+       userId: "7325647133",
+       created_at: Date.now(),
+       utmLink: getUtmParams().ad,
+       leadIp: leadIp.ip,
+     }
     )}
     `,
     {
